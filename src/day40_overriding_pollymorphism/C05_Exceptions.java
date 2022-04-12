@@ -15,10 +15,26 @@ public class C05_Exceptions {
             int sayi= 0;
             try {
                 sayi = scan.nextInt();
+                toplam+=sayi;
             } catch (InputMismatchException e) {
+                String hataliGris=scan.next();
+                if (hataliGris.equalsIgnoreCase("q")){
+
+                    break;
+                }else{
+                    System.out.println("hatali giris");
+                }
             }
-            toplam+=sayi;
+
+
+
+
+
+
+
+
         }while (toplam<500);
+        System.out.println("girdiginiz sayilarin toplami : "+toplam);
     }
 
 }
